@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Mihigo Justin">
+    <title>Pediatric GrowthTrack</title>
+    <link rel="stylesheet" href="./css/style.css" type="text/css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="shortcut icon" href="icon48.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+</head>
+<body>
+    <script src="./js/real.js" defer>
+    </script>
+<div class="nav" id="home">
+    <div class="left">
+        <div class="collapse">
+            <i class="fa fa-close" id="close"></i>
+            <i class="fa-solid fa-bars" id="menu"></i>
+        </div>
+        
+    <div id="logo"></div>
+        <h3>Pediatric GrowthTrack</h3>
+    </div>
+    <ul class="right" id="list">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#how" onclick='view(`a[href="#how"]`,".sect3")'>How it works</a></li>
+        <li><a href="#about" onclick='view(`a[href="#about"]`,".sect1")'>About us</a></li>
+        <li><a href="#contact" onclick='view(`a[href="#contact"]`,".sect4")'>Contact us</a></li>
+        <li><a href="./html/sig.html">Login</a></li>
+        <li><a href="./html/logpage.html">Signup</a></li>
+    </ul>
+    </div>
+    <div id="side"> 
+    </div>
+    <div class="wrap">
+    <div class="slider">
+    <div class="slides slide1">    
+    <article class="art2">
+        <h2> Welcome to the first virtual Health assistant</h2>
+        <p class="cotext"> Pediatric GrowthTrack is a groundbreaking initiative designed
+            to revolutionize the way hospitals and parents track and support 
+            the growth of children. We understand that monitoring a child's 
+            growth is crucial for their overall health and well-being. With 
+            our user-friendly website, we aim to bridge the gap between hospitals,
+             doctors, and parents, offering a comprehensive and integrated 
+             platform for growth tracking and recommendations. Our mission is to 
+             empower parents with valuable insights and expert guidance, enabling 
+             them to take proactive steps
+            in ensuring their child's optimal growth and development.
+        </p>
+        <button class="direct"> Join us</button>
+        </article>
+        </div>
+        
+    <div class="slides slide2"> 
+    <article class="art2"> 
+        <h2> Why Pediatric GrowthTrack</h2>
+        <p class="cotext"> Pediatric GrowthTrack addresses the need for a cohesive system
+        that brings together healthcare professionals and parents to 
+        collaboratively monitor a child's growth journey. Our platform
+        provides hospitals and doctors with a streamlined approach to
+        input and analyze growth data accurately. At the same time,
+        parents gain access to personalized recommendations and 
+        practical suggestions to support their child's well-being.
+        With our intuitive interface and data-driven insights,
+        Pediatric GrowthTrack equips parents with the knowledge
+        and tools they need to make informed decisions and take
+        action when it matters most.
+        </p>
+        <button class="direct"><a href="./html/logpage.html">Join us</a></button>
+        </article>
+    </div>
+    </div>
+    <div class="lr" >
+        <span class="l" onclick="slider(0)"><</span>
+        <span class="r" onclick="slider(1)">></span>
+    </div>
+    <div class="dots">
+        <ul>
+            <li onclick="slider(0)">.</li>
+            <li onclick="slider(1)">.</li>
+        </ul>
+    </div>
+    </div>
+<section class="slides fade">
+    <img src="./images/kid2.jpg" width="100%" height="auto">
+    <article class="art2"> 
+        <h2> Why Pediatric GrowthTrack</h2>
+        <p class="cotext"> Pediatric GrowthTrack addresses the need for a cohesive system
+        that brings together healthcare professionals and parents to 
+        collaboratively monitor a child's growth journey. Our platform
+        provides hospitals and doctors with a streamlined approach to
+        input and analyze growth data accurately. At the same time,
+        parents gain access to personalized recommendations and 
+        practical suggestions to support their child's well-being.
+        With our intuitive interface and data-driven insights,
+        Pediatric GrowthTrack equips parents with the knowledge
+        and tools they need to make informed decisions and take
+        action when it matters most.
+        </p>
+        <button class="direct"> Join us</button>
+        </article>
+</section>
+<section class="sect3">
+    <h1 class="us">How it works</h1>
+    <div class="section">
+        <span><iframe width="600px" height="300px" src="https://www.youtube.com/watch?v=BmvZoRpUKs8"></iframe></span>
+        <p>
+Our seamless process involves accurate data entry by healthcare providers, in-depth
+growth analysis, tailored recommendations including vaccination schedules, and continuous
+engagement for the best outcomes." <br>
+<button class="direct"> Join us</button>
+    </p>    
+</div>
+</section>
+<section class="sect1">
+    <h1 class="us">About us</h1>
+    <div class="section">
+    <article class="art1"> 
+        <h1>Our values</h1>
+        <p>
+            At Pediatric GrowthTrack We are committed to fostering better
+            health outcomes,accurate data analysis, privacy protection, and
+            empowering parents to make informed decisions.Last but not least,
+            We value collaboration, data accuracy, privacy, and empowering parents
+        </p>
+    </article>
+    <article class="art1">
+        <h1>Our mission</h1>
+    <p>
+        At Pediatric GrowthTrack, we're dedicated to supporting children's health
+        and well-being. Our mission is to provide a unified platform a to empower 
+        hospitals, doctors, and parents in monitoring and nurturing
+        the growth of children. <br>
+        <a class="link" onclick="collapse()">Read more</a>
+        <p id="read" style="display: none;"> We strive to provide a user-friendly
+        website that utilizes data analysis, personalized recommendations,
+        and effective communication to enable parents to take timely action
+        based on expert guidance. Through our platform, we aim to enhance
+        the well-being and development 
+        of children, fostering a healthier future generation.<br></p>
+    </p>
+    </article>
+    <article class="art1">
+        <h1>Our Approach</h1>
+    <p>
+        "By combining growth tracking, vaccinations, and expert insights,
+        we aim to create a comprehensive tool for parents and healthcare 
+        providers."
+</p>
+    </article>
+    </div>
+    <h1 class="us">Meet our team</h1>
+    <div class="section">
+    <article class="art3"> 
+        <span class="holder" id="pers1"></span>
+        <span><b>Mihigo Justin</b></span>
+        <span><i>Tech enthusiast and Software engineer</i></span>
+        <p>
+            Azubi certified Business analyst, a university student, skilled
+            in Excel, Python, Machine learning, and a software engineer. with a 3+ years of 
+            experience.
+        </p>
+    </article>
+    <article class="art3"> 
+        <span class="holder" id="pers2"></span>
+        <span><b>Turatsinze Uvremba</b></span>
+        <span><i>Information Technologist</i></span>
+        <p>
+            Cisco certified Security analyst, a university student, skilled
+            in React, Python, Machine learning, and a software engineer. with a 3+ years of 
+            experience.
+        </p>
+    </article>
+    <article class="art3"> 
+        <span class="holder" id="pers3"></span>
+        <span><b>Kwizera Olivier</b></span>
+        <span><i>Specialized pediatric doctor</i></span>
+        <p>
+            RBC certified Pediatric expert, a university student, skilled
+            in with hands on experience in the field of taking care of children. with a 3+ years of 
+            experience.
+        </p>
+    </article>
+    </div>
+</section>
+<section class="sect4">
+    <h2 class="us">Contact us</h2>
+    <div class=".cont">
+        <form>
+            <label for="email"> Email:<br>
+            <input type="email" name="first" class="input" placeholder="Enter email"><br>
+            </label><br>
+            <label for="full"> Full name:<br>
+            <input type="text" name="second" class="input" placeholder="Enter your name"><br>
+            </label> Comment:<br>
+            <textarea name="comm" cols="30" rows="3"></textarea>
+            <br>
+            <input type="submit" value="submit" class="input"><br>
+            </form>
+            <footer>
+                <section class="sect6">
+                    <div class="footer">
+                        <ul>
+                                <li><b>Patners</b></li>
+                            <li>RBC</li>
+                            <li>MCNM</li>
+                            <li>MINISANTE</li>
+                        </ul>
+                    </div>
+                <div class="footer">
+                <ul>
+                        <li><b>Contact us</b></li>
+                    <li><address>Address: Kigali, Nyarugenge, KN 35 Ave</address> </li>
+                    <li>Phone: +250791352573</li>
+                    <li>Email: mihigojustin28@gmail.com</li>
+                </ul>
+            </div>
+            <div class="footer">
+                <ul>
+                    <li><b>Quick links</b></li>
+                    <li>Home</li>
+                    <li>How it works</li>
+                    <li>About us</li>
+                    <li>Contact us</li>
+                    <li>Login</li>
+                </ul>
+            </div>
+            <div class="footer">
+                <ul>
+                    <li><b>Social Media</b></li>
+                    <li>Facebook</li>
+                    <li>Instagram</li>
+                    <li>Linkedin</li>
+                    <li>Twitter</li>
+                    <li>Thread</li>
+                </ul>
+            </div>
+            <div class="footer">
+                <ul>
+                    <li><b>Data policy</b></li>
+                    <li>Legal terms and policy</li>
+                    <li>Data Privacy</li>
+                </ul>
+            </div>
+            </div>
+        </section>
+        <p class="p">&copy Copyright Pediatric GrowthTrack 2023. All rights reserved</p,>
+            </footer>
+</body>
+</html>

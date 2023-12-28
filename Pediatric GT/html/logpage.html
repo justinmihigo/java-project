@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="shortcut icon" href="icon48.png" type="image/x-icon">
+    <link rel="stylesheet" href="logcss.css">
+</head>
+<body>
+    <div class="cont">
+    <div class="wrapper">
+        <form action="index.php" method="post">
+            <label> First Name<br>
+            <input type="text" name="first" class="input" placeholder="Enter your first name"><br>
+            </label>
+            <label> Second Name<br>
+            <input type="text" name="second" class="input" placeholder="Enter your second name"><br>
+            </label>
+            <label> Date of birth<br>
+            <input type="date" name="date" class="input"><br>
+            </label>
+            <label> Telephone number<br>
+            <input type="number" name="tel" class="input" placeholder="078282833"><br>
+            </label>
+            <label> Email<br>
+            <input type="email" name="email" class="input" placeholder="example@mail.com"><br>
+            </label>
+            <label>New password<br>
+            <input type="password" class="input" placeholder="Enter your password"><br>
+            </label>
+            <label>Confirm password<br>
+                <input type="password" class="input" placeholder="Enter your password"><br>
+                </label>
+            Gender<br>
+            <input type="radio" name="gender" value="M"> Male<br>
+            <input type="radio" name="gender" value="F"> Female<br>
+            <input type="radio" name="gender" value="B"> Non-binary<br>
+            <input type="radio" name="gender" value="LBTQ"> LBTQ+<br>
+            <input type="radio" name="gender" value="no"> Prefer not to say<br>
+            <input type="submit" value="submit" class="input"><br>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
