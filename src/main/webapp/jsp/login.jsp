@@ -1,3 +1,5 @@
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,19 +7,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="shortcut icon" href="icon48.png" type="image/x-icon">
-    <link rel="stylesheet" href="logcss.css">
+    <link rel="stylesheet" href="../html/logcss.css">
 </head>
 <body>
     <div class="cont">
     <div class="wrapper">
-        <form action="login.php" method="post">
+        <form action="../LoginServlet" method="post">
             <label> Email</label><br>
             <input type="email" name="email" class="input" placeholder="example@mail.com"><br>
             <label> Password</label><br>
-            <input type="password" name="passwd" class="input" placeholder="Enter your password"><br>
+            <input type="password" name="password" class="input" placeholder="Enter your password"><br>
             <input type="submit" value="submit" class="input"><br>
             <a href="#"> Forgot your password</a><br>
-            <p> Don't have account <a href="../html/logpage.html">Signup</a></p><br>
+            <p> Don't have account <a href="../jsp/signup.jsp">Signup</a></p><br>
+            
             </form>
             </div>
             </div>

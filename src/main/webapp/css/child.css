@@ -16,12 +16,15 @@ form{
     flex-direction: column;
     justify-content: space-around;
 }
-label{
+label, input[type="radio"]{
     display: block;
 }
 .options label,.options input{
     display: inline;
     vertical-align: middle;
+}
+.wrapper h2{
+    padding: 10px 0;
 }
 .cont{
     box-sizing: border-box;

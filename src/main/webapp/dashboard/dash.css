@@ -6,6 +6,9 @@
     --mykg:rgba(0, 0, 38, 0.817);
     --mygradient:linear-gradient(30deg,rgba(55, 93, 230, 0.738),rgba(66, 66, 234, 0.663));
 }
+*{
+    font-size: 14px;
+}
 body{
     padding: 0px;
     margin: 0px;
