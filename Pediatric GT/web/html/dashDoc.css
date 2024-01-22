@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap');
+:root{
+    --myfam:Poppins;
+    --blue:rgba(66, 66, 234, 0.663);
+    --green:rgba(38, 207, 38);
+    --mykg:rgba(0, 0, 38, 0.817);
+    --mygradient:linear-gradient(30deg,rgba(55, 93, 230, 0.738),rgba(66, 66, 234, 0.663));
+}
+*{
+    font-size: medium;
+}
+body{
+    padding: 0px;
+    margin: 0px;
+    font-family:var(--myfam);
+    margin: auto;
+    background-color:var(--mykg);
+}
+a{
+    text-decoration: none;
+    font-family:var(--myfam);
+    color:beige;
+}
+li{
+    list-style-type: none;
+    display:inline-block;
+}
+.nav{
+    position: fixed;
+    top:0;
+    width:100%;
+    background-color: var(--green);
+    color:beige;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    z-index:1;
+}
+.left{
+    width:50%;
+    display: flex;
+    gap:300px;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+.logo{
+    display: flex;
+    gap:30px;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.left:first-child{
+    display: flex;
+    justify-self:start;
+}
+.right{
+    width: 30%;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-right: 30px;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+@media screen and (max-width: 750px) {
+    *{
+        width: auto;
+        margin: auto;
+    }
+    .nav{
+        flex-direction: column;
+    }
+    .right ul{
+        display:none;
+    }
+    body{
+        color:var(--blue);
+    }
+}
+#logo{
+    width:50px;
+    height: 50px;
+    border: 1px solid gray;
+    border-radius: 50%;
+    background: url("/images/GOOD.JPG");
+    background-size: cover;
+    background-position:center;
+}
+aside{
+    position: fixed;
+    top: 55px;
+    margin-top:12px ;
+    width: 20%;
+    background-color: var(--green);
+    color:#ffffff;
+    height:89vh;
+}
+.dashboard{
+    box-sizing: border-box;
+    padding-top: 15px;
+}
+.dashboard ul{
+    display:grid;
+    grid-template-rows: repeat(autofit,minmax(0,1fr));
+    gap:20px;
+}
+.dashboard ul > *{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 30px;    
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    width: 80%;
+    left: 20%;
+    position: absolute;
+    top: 100px;
+    color: white;
+}
+input{
+    border:2px var(--blue) solid;
+    border-radius: 5px;
+    height: 30px;
+    width:300px;
+    padding:5px;
+    font-family: var(--myfam);
+}
+input[type="submit"]{
+    margin: 10px 0;
+    height: 30px;
+}
+
+label, input{
+    display: block;
+    margin: 5px 0;
+}
+button{
+    background-color: var(--green);
+    text-transform: capitalize;
+    color:white;
+    width: 100px;
+    height:40px;
+    font-size: 16px;
+    border-radius: 5px;
+    border-color: transparent;
+}
+.cards{
+    display: flex;
+    justify-content: space-around;
+}
+.card1{
+    height:30vh;
+}
+.card1, #card2, #card3{
+    width: 30%;
+    box-sizing: border-box;
+    border: 2px var white solid;
+    border-radius: 20px;
+    box-shadow: 1px 10px 10px rgb(2, 35, 56);
+    background-color: var(--blue);
+    padding:15px;
+}
+.start{
+    width:100%;
+    display: flex;
+    justify-content: space-around;
+}
+td{
+    border-bottom: 1px;
+    text-align: center;
+}
+.appointments h2, .center{
+    text-align: center;
+}
+.data{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.centered{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
