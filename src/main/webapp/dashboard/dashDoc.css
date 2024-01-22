@@ -154,6 +154,9 @@ button{
     display: flex;
     justify-content: space-around;
 }
+.card1{
+    height:30vh;
+}
 .card1, #card2, #card3{
     width: 30%;
     box-sizing: border-box;

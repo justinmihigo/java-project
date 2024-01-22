@@ -1,9 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
- */
 package servlets;
-
 import dao.*;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -12,10 +7,6 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-/**
- *
- * @author user
- */
 public class AddAppointment extends HttpServlet {
 
     private static final long serialVersionUID = 1L;
@@ -36,7 +27,6 @@ public class AddAppointment extends HttpServlet {
 
         AppointmentDao appointmentDao = new AppointmentDao(); // Assuming AppointmentDao is your Data Access Object class
         boolean isAppointmentAdded = appointmentDao.addAppointment(appointDate, childId, parentId, hospitalId, doctorId);
-
         if (isAppointmentAdded) {
             out.println("<html><body><p>Appointment added successfully!</p></body></html>");
         } else {

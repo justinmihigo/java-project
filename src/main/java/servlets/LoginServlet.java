@@ -1,5 +1,6 @@
 package servlets;
-
+import dao.AppointmentDao;
+import model.Appointment;
 import java.io.IOException;
 import java.io.PrintWriter;
 import dao.*;
@@ -9,7 +10,10 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
+import jakarta.servlet.RequestDispatcher;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 @WebServlet("/LoginServlet")
 public class LoginServlet extends HttpServlet {
@@ -41,7 +45,13 @@ public class LoginServlet extends HttpServlet {
             } catch (SQLException ex) {
                 System.out.println(ex);
             }
-            response.sendRedirect("./dashboard/dash.jsp");
+            AppointmentDao appointDao=new AppointmentDao();
+              List<Appointment> appointment=appointDao.SelectAll();
+              request.setAttribute("appointment", appointment);
+              RequestDispatcher rs=request.getRequestDispatcher("./dashboard/dash.jsp");
+              rs.forward(request,response);
+//            response.sendRedirect("./dashboard/dash.jsp");
+            
         } else {
             out.println("<html><body><p>Login failed. Please check your credentials and try again.</p></body></html>");
         }
