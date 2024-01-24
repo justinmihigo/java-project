@@ -3,11 +3,14 @@
     --myfam:Poppins;
     --blue:rgba(66, 66, 234, 0.663);
     --green:rgba(38, 207, 38);
-    --mykg:rgba(0, 0, 38, 0.817);
+    --mykg:rgba(0, 0, 38, 0.7);
     --mygradient:linear-gradient(30deg,rgba(55, 93, 230, 0.738),rgba(66, 66, 234, 0.663));
 }
 *{
     font-size: medium;
+}
+.color{
+    color:var(--green);
 }
 body{
     padding: 0px;
@@ -123,7 +126,7 @@ aside{
     top: 100px;
     color: white;
 }
-input{
+.input{
     border:2px var(--blue) solid;
     border-radius: 5px;
     height: 30px;
@@ -140,6 +143,7 @@ label, input{
     display: block;
     margin: 5px 0;
 }
+
 button{
     background-color: var(--green);
     text-transform: capitalize;

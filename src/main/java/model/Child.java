@@ -1,5 +1,6 @@
 
 package model;
+import java.time.LocalDate;
 import java.util.Date;
 
 public class Child {
@@ -20,6 +21,11 @@ public class Child {
     }
 
     public Child() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    public Child(int aInt, String string, String string0, LocalDate toLocalDate,
+            int aInt0, String string1, int aInt1) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 

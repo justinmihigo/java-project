@@ -1,3 +1,6 @@
+
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -82,35 +85,50 @@
             <section class="recommendations" id="recommendations">
                 <h2 class="center">Recommendations</h2>
                 <div class="cards">
-                    No recommendations given <button>Give</button>
-            </section>
-
-            <div class="appointments" id="appointments">
-                <h2>Appointments</h2>
-                <table width="80%" cellspacing="20">
-                    <thead>
-                        <tr>
-                            <th>AppointNo</th>
-                            <th>Assigned</th>
-                            <th>Parent Name</th>
-                            <th>Email</th>
-                            <th>Date</th>
-                            <th>Telephone</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-
-                    </tbody>
-
-                </table>
-                <div class="centered">
-                    <p> No Appointments Scheduled </p>
-                    <button>Create</button>
+<!--                    No recommendations given <button>Give</button>-->
+                    <!-- Add new recommendation form -->
+                    <form action="../AddRecommendationServlet" method="post">
+                        
+                        <label for="parentId">Parent ID:</label>
+                        <input type="number" id="parentId" name="parentId" required><br>
+            
+                        <label for="recommendText">Recommendation Text:</label>
+                        <textarea id="recommendText" name="recommendText" rows="4" cols="50" required></textarea><br>
+                        <input type="submit" value="Give Recommendation">
+                    </form>
                 </div>
+            </section>
+        
+            <div class="appointments" id="appointments">
+    <h2>Appointments</h2>
+    
+    <div class="centered">
+          <!-- Add new appointment form -->
+        <form action="../AddAppointmentServlet" method="post">
+            <label for="appointDate">Appointment Date:</label>
+            <input type="date" id="appointDate" name="appointDate" required><br>
 
-            </div>
+            <label for="childId">Child ID:</label>
+            <input type="number" id="childId" name="childId" required><br>
 
+            <label for="parentId">Parent ID:</label>
+            <input type="number" id="parentId" name="parentId" required><br>
+
+            <label for="hospitalId">Hospital ID:</label>
+            <input type="number" id="hospitalId" name="hospitalId" required><br>
+
+            <label for="doctorId">Doctor ID:</label>
+            <input type="number" id="doctorId" name="doctorId" required><br>
+
+            <!-- Add additional fields as needed -->
+
+            <input type="submit" value="Create Appointment">
+        </form>
+    </div>
+</div>
+        
         </div>
+    </div>
 </body>
 
 </html>

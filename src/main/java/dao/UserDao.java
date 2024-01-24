@@ -5,6 +5,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
 
 public class UserDao {
 
@@ -46,6 +48,25 @@ public class UserDao {
         }
         return false;
     }
+    public List<String> getUsertype(String email, String password) throws SQLException {
+        List <String> userType=new ArrayList<>();
+        try (Connection connection = DbConnection.connect()) {
+            String query = "SELECT type, lname FROM users WHERE email = ? AND password = ?";
+            try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+                preparedStatement.setString(1, email);
+                preparedStatement.setString(2, password);
+                ResultSet resultSet = preparedStatement.executeQuery();
+                    while(resultSet.next()){
+                        String type=resultSet.getString("type");
+                        String lname=resultSet.getString("lname");
+                        userType.add(0,type);
+                        userType.add(1,lname);
+                        
+                    }
+                    return userType;
+                }
+            }
+    }
     public int returnId(String email, String password) throws SQLException {
         
         try (Connection connection = DbConnection.connect()) {
@@ -83,9 +104,9 @@ public class UserDao {
             System.out.println(e);
         }
     }
-    public void insertIntoDoctors(String fname, String lname, String dob, String tel, String email, String gender) throws SQLException{
+    public void insertIntoDoctors(String fname, String lname, String dob, String tel, String email, String gender,String specialization) throws SQLException{
         try(Connection connection=DbConnection.connect()){
-            String query="insert into doctors (fname,lname,dob,tel,email,gender) values(?,?,?,?,?,?)";
+            String query="insert into doctors (fname,lname,dob,tel,email,gender,specialization) values(?,?,?,?,?,?,?)";
             PreparedStatement pstmt=connection.prepareStatement(query);
             pstmt.setString(1,fname );
             pstmt.setString(2,lname );
@@ -93,6 +114,7 @@ public class UserDao {
             pstmt.setString(4, tel);
             pstmt.setString(5,email );
             pstmt.setString(6,gender );
+            pstmt.setString(7,specialization);
             pstmt.executeUpdate();
             
         }
@@ -129,6 +151,26 @@ public boolean checkChild() throws SQLException{
             return false;
         }
     }
+
+public boolean updateDoctorId(int id) throws SQLException{
+    try(Connection connection=DbConnection.connect()){
+        String query="update doctors set doctorId=?";
+        PreparedStatement pstmt=connection.prepareStatement(query);
+        pstmt.setInt(1,id);
+        int row=pstmt.executeUpdate();
+        return row>0;
+    }
+}
+
+public boolean updateParentId(int id) throws SQLException{
+    try(Connection connection=DbConnection.connect()){
+        String query="update parents set parentId=?";
+        PreparedStatement pstmt=connection.prepareStatement(query);
+        pstmt.setInt(1,id);
+        int row=pstmt.executeUpdate();
+        return row>0;
+    }
+}
 }
 
 

@@ -8,6 +8,14 @@
         <servlet-name>parents</servlet-name>
         <servlet-class>servlets.parents</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>GrowthDataServlet</servlet-name>
+        <servlet-class>servlets.GrowthDataServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DoctorServlet</servlet-name>
+        <servlet-class>servlets.DoctorServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>AddAppointment</servlet-name>
         <url-pattern>/AddAppointment</url-pattern>
@@ -15,6 +23,14 @@
     <servlet-mapping>
         <servlet-name>parents</servlet-name>
         <url-pattern>/parents</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GrowthDataServlet</servlet-name>
+        <url-pattern>/GrowthDataServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DoctorServlet</servlet-name>
+        <url-pattern>/DoctorServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

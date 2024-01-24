@@ -29,6 +29,7 @@ public class RegisterServlet extends HttpServlet {
         String password = request.getParameter("password");
         String gender = request.getParameter("gender");
         String accType = request.getParameter("person");
+        String specialization=request.getParameter("specialization");
         if (fname.trim().equals("")) {
             out.println("<html><body><p>Empty fields!</p></body></html>");
             return;
@@ -48,7 +49,7 @@ public class RegisterServlet extends HttpServlet {
                 case "doctor":
                     try {
                         userDao.insertIntoDoctors(fname, lname, dob, tel, email,
-                                gender);
+                                gender,specialization);
                     } catch (SQLException ex) {
                         System.out.println(ex);
                     }   break;

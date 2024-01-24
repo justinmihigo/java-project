@@ -13,7 +13,7 @@
     <div class="wrapper">
         <h2>Enter your child's information</h2>
         <form action="../parents" method="post">
-            <input type="text" value="${userId}">
+            <input type="hidden" value="${userId}">
             <label for="fname">First name</label><br>
             <input type="text" name="fname" class="input" id="fname" placeholder="Enter the child's First name"><br>
             <label for="lname">Last name</label><br>

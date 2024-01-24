@@ -11,21 +11,17 @@
     margin: 0;
     font-family: var(--myfam);
 }
-form{
+/*form{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-}
-label, input[type="radio"]{
-    display: block;
-}
+}*/
+
 .options label,.options input{
     display: inline;
     vertical-align: middle;
 }
-.wrapper h2{
-    padding: 10px 0;
-}
+
 .cont{
     box-sizing: border-box;
     width:50%;
@@ -35,6 +31,15 @@ label, input[type="radio"]{
     align-items: center;
     padding: 10px 0 10px 0;
 }
+.wrapper h2{
+    padding: 10px 0;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+}
+
 .wrapper{
     box-sizing: border-box;
     padding: 20px;
@@ -48,6 +53,9 @@ label, input[type="radio"]{
     box-shadow: -2px 2px 10px var(--blue);
     width:60%;
 }
+input, label{
+    display:block;
+}
 .input {
     border:2px var(--blue) solid;
     border-radius: 5px;
@@ -58,10 +66,20 @@ label, input[type="radio"]{
 ::placeholder{
     padding: 10px;
 }
+label,input{
+    display:block;
+    margin: 10px 0;
+}
 input[type="submit"]{
     background-color: var(--green);
     text-transform: capitalize;
     color:white;
+}
+
+.data{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 a{
     text-decoration: none;

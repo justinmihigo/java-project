@@ -47,7 +47,50 @@ public class ChildDao{
         }
         return null;
     }
-
+    public int getChildId(int Id) throws SQLException{
+        try (Connection connection = DbConnection.connect()) {
+            String query = "SELECT childId FROM children WHERE parentId = ?";
+            try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+                preparedStatement.setInt(1, Id);
+                ResultSet rs=preparedStatement.executeQuery();
+                while(rs.next()){
+                    int childId=rs.getInt("childId");
+                    return childId;
+            }
+        } 
+       
+    }
+        return 0;
+    }
+    public String childName(int Id) throws SQLException{
+        try (Connection connection = DbConnection.connect()) {
+            String query = "SELECT fname FROM children WHERE childId = ?";
+            try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+                preparedStatement.setInt(1, Id);
+                ResultSet rs=preparedStatement.executeQuery();
+                while(rs.next()){
+                    String childName=rs.getString("fname");
+                    return childName;
+            }
+        } 
+    }
+        return "";
+    }
+    public int getChildAge(int Id) throws SQLException{
+        try (Connection connection = DbConnection.connect()) {
+            String query = "SELECT age FROM children WHERE parentId = ?";
+            try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+                preparedStatement.setInt(1, Id);
+                ResultSet rs=preparedStatement.executeQuery();
+                while(rs.next()){
+                    int age=rs.getInt("age");
+                    return age;
+            }
+        } 
+       
+    }
+        return 0;
+    }
     public List<Child> getAllChildren() {
         List<Child> children = new ArrayList<>();
         try (Connection connection = DbConnection.connect()) {
@@ -64,6 +107,7 @@ public class ChildDao{
         }
         return children;
     }
+   
 
     // Update
     public boolean updateHospital(Child child) {

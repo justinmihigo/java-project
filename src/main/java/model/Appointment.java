@@ -1,5 +1,7 @@
 package model;
 
+import java.sql.Date;
+
 
 public class Appointment {
     private int appointmentId;
@@ -16,6 +18,10 @@ public class Appointment {
         this.email = email;
         this.appointDate = appointDate;
         this.tel = tel;
+    }
+
+    public Appointment(int aInt, int aInt0, int aInt1, Date date, int aInt2) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     public int getAppointmentId() {
